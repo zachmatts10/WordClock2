@@ -277,7 +277,7 @@ def getTimeWords(t=None):
         disp_hour = t.hour
 
     if disp_hour == 0 or disp_hour == 24:
-        words += ["htwelve']    
+        words += ['htwelve']    
     elif disp_hour == 12:
         words += ['htwelve','noon']
     elif disp_hour == 1 or disp_hour == 13:
