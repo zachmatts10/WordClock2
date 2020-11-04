@@ -439,4 +439,4 @@ def exit_handler():
 if __name__ == '__main__':
     atexit.register(exit_handler)
     signal.signal(signal.SIGINT, lambda x,y: sys.exit(0))
-    run("time-test")
+    run("time_test")
