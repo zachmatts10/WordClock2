@@ -29,11 +29,11 @@ AQUA    = [0,   255, 255]
 WHITE   = [255, 255, 255]
 
 # Birthday
-BIRTH_MONTH = 8
-BIRTH_DAY = 29
+BIRTH_MONTH = 7
+BIRTH_DAY = 1
 
-#Color Fade Order (for Leah <3)
-FADE_COLORS = [LIME, YELLOW, RED, FUCHSIA, BLUE, AQUA]
+#Color Fade Order
+FADE_COLORS = [WHITE]
 
 
 # Enumerate RGB Matrix Object
@@ -45,66 +45,75 @@ matrix = Adafruit_RGBmatrix(MATRIX_H, MATRIX_W/MATRIX_H)
 # Y is 1 - 16 includive
 # Origin is top left corner 
 m = {
-    "happy"      : {"row" : 1,  "start" : 1,  "length" : 4, "height" : 1},
-    "birthday"      : {"row" : 1,  "start" : 5,  "length" : 4, "height" : 1},
-    "the"  : {"row" : 2,  "start" : 1,  "length" : 8, "height" : 1},
-    "time"     : {"row" : 1,  "start" : 9,  "length" : 6, "height" : 2},
-    "is"    : {"row" : 1,  "start" : 15, "length" : 2, "height" : 2},
-    "time"      : {"row" : 3,  "start" : 1,  "length" : 4, "height" : 1},
-    "carpe"     : {"row" : 3,  "start" : 5,  "length" : 5, "height" : 1},
-    "for"       : {"row" : 3,  "start" : 10, "length" : 3, "height" : 1},
-    "diem"      : {"row" : 3,  "start" : 13, "length" : 4, "height" : 1},
-    "happy"     : {"row" : 4,  "start" : 1,  "length" : 5, "height" : 1},
-    "sleep"     : {"row" : 4,  "start" : 6,  "length" : 5, "height" : 1},
-    "coffee"    : {"row" : 4,  "start" : 11, "length" : 6, "height" : 1},
-    "it"        : {"row" : 5,  "start" : 1,  "length" : 2, "height" : 1},
-    "friday"    : {"row" : 5,  "start" : 3,  "length" : 6, "height" : 1},
-    "birthday"  : {"row" : 5,  "start" : 9,  "length" : 8, "height" : 1},
-    "hi"        : {"row" : 6,  "start" : 1,  "length" : 2, "height" : 1},
-    "is1"       : {"row" : 6,  "start" : 2,  "length" : 2, "height" : 1},
-    "leah2"     : {"row" : 6,  "start" : 4,  "length" : 4, "height" : 1},
-    "ten1"      : {"row" : 6,  "start" : 8,  "length" : 3, "height" : 1},
-    "twenty"    : {"row" : 6,  "start" : 11, "length" : 6, "height" : 1},
-    "half"      : {"row" : 7,  "start" : 1,  "length" : 4, "height" : 1},
-    "a1"        : {"row" : 7,  "start" : 5,  "length" : 1, "height" : 1},
-    "five1"     : {"row" : 7,  "start" : 6,  "length" : 4, "height" : 1},
-    "quarter"   : {"row" : 7,  "start" : 10, "length" : 7, "height" : 1},
-    "minutes"   : {"row" : 8,  "start" : 1,  "length" : 7, "height" : 1},
-    "this"      : {"row" : 8,  "start" : 8,  "length" : 4, "height" : 1},
-    "past"      : {"row" : 8,  "start" : 12, "length" : 4, "height" : 1},
-    "to"        : {"row" : 8,  "start" : 15, "length" : 2, "height" : 1},
-    "one"       : {"row" : 9,  "start" : 1,  "length" : 3, "height" : 1},
-    "two"       : {"row" : 9,  "start" : 4,  "length" : 3, "height" : 1},
-    "three"     : {"row" : 9,  "start" : 7,  "length" : 5, "height" : 1},
-    "eight"     : {"row" : 9,  "start" : 12, "length" : 5, "height" : 1},
-    "five2"     : {"row" : 10, "start" : 1,  "length" : 4, "height" : 1},
-    "is2"       : {"row" : 10, "start" : 5,  "length" : 2, "height" : 1},
-    "eleven"    : {"row" : 10, "start" : 7,  "length" : 6, "height" : 1},
-    "nine"      : {"row" : 10, "start" : 13, "length" : 4, "height" : 1},
-    "four"      : {"row" : 11, "start" : 1,  "length" : 4, "height" : 1},
-    "a2"        : {"row" : 11, "start" : 5,  "length" : 1, "height" : 1},
-    "six"       : {"row" : 11, "start" : 6,  "length" : 3, "height" : 1},
-    "seven"     : {"row" : 11, "start" : 9,  "length" : 5, "height" : 1},
-    "ten2"      : {"row" : 11, "start" : 14, "length" : 3, "height" : 1},
-    "twelve"    : {"row" : 12, "start" : 1,  "length" : 6, "height" : 1},
-    "word"      : {"row" : 12, "start" : 7,  "length" : 4, "height" : 1},
-    "oclock"    : {"row" : 12, "start" : 11, "length" : 6, "height" : 1},
-    "clock"     : {"row" : 12, "start" : 12, "length" : 5, "height" : 1},
-    "midnight"  : {"row" : 13, "start" : 1,  "length" : 8, "height" : 1},
-    "i"         : {"row" : 13, "start" : 2,  "length" : 1, "height" : 1},
-    "in"        : {"row" : 13, "start" : 9,  "length" : 2, "height" : 1},
-    "noon"      : {"row" : 13, "start" : 10, "length" : 4, "height" : 1},
-    "the"       : {"row" : 13, "start" : 14, "length" : 3, "height" : 1},
-    "built"     : {"row" : 14, "start" : 1,  "length" : 5, "height" : 1},
-    "morning"   : {"row" : 14, "start" : 6,  "length" : 7, "height" : 1},
-    "with"      : {"row" : 14, "start" : 13, "length" : 4, "height" : 1},
-    "love"      : {"row" : 15, "start" : 1,  "length" : 4, "height" : 1},
-    "afternoon" : {"row" : 15, "start" : 5,  "length" : 9, "height" : 1},
-    "you"       : {"row" : 15, "start" : 14, "length" : 3, "height" : 1},
-    "by"        : {"row" : 16, "start" : 1,  "length" : 2, "height" : 1},
-    "evening"   : {"row" : 16, "start" : 3,  "length" : 7, "height" : 1},
-    "jeremy"    : {"row" : 16, "start" : 10, "length" : 6, "height" : 1},
-    "heart2"    : {"row" : 16, "start" : 16, "length" : 1, "height" : 1}
+    "happy"     : {"row" : 1,  "start" : 2,  "length" : 5, "height" : 1},
+    "birthday"  : {"row" : 1,  "start" : 8,  "length" : 8, "height" : 1},
+    
+    "the"       : {"row" : 2,  "start" : 1,  "length" : 3, "height" : 1},
+    "time"      : {"row" : 2,  "start" : 5,  "length" : 4, "height" : 1},
+    "is"        : {"row" : 2,  "start" : 10, "length" : 2, "height" : 1},
+    "half"      : {"row" : 2,  "start" : 13, "length" : 4, "height" : 1},
+    
+    "quarter"   : {"row" : 3,  "start" : 1,  "length" : 7, "height" : 1},
+    "twenty"    : {"row" : 3,  "start" : 8,  "length" : 6, "height" : 1},
+    
+    "ten"       : {"row" : 4,  "start" : 1,  "length" : 3, "height" : 1},
+    "six"       : {"row" : 4,  "start" : 4,  "length" : 3, "height" : 1},
+    "sixteen"   : {"row" : 4,  "start" : 4,  "length" : 7, "height" : 1},
+    "two"       : {"row" : 4,  "start" : 11, "length" : 3, "height" : 1},
+    "one"       : {"row" : 4,  "start" : 13, "length" : 3, "height" : 1},
+    
+    "eight"     : {"row" : 5,  "start" : 1,  "length" : 5, "height" : 1},
+    "eighteen"  : {"row" : 5,  "start" : 1,  "length" : 8, "height" : 1},
+    "five"      : {"row" : 5,  "start" : 9,  "length" : 4, "height" : 1},
+    
+    "seventeen" : {"row" : 6,  "start" : 1,  "length" : 9, "height" : 1},
+    "seven"     : {"row" : 6,  "start" : 1,  "length" : 5, "height" : 1},
+    "nine"      : {"row" : 6,  "start" : 9,  "length" : 4, "height" : 1},
+    "nineteen"  : {"row" : 6,  "start" : 9,  "length" : 8, "height" : 1},
+    
+    "fourteen"  : {"row" : 7,  "start" : 1,  "length" : 8, "height" : 1},
+    "four"      : {"row" : 7,  "start" : 1,  "length" : 4, "height" : 1},
+    "thirteen"  : {"row" : 7,  "start" : 9,  "length" : 8, "height" : 1},
+    
+    "twelve"    : {"row" : 8,  "start" : 1,  "length" : 6, "height" : 1},
+    "eleven"    : {"row" : 8,  "start" : 6,  "length" : 6, "height" : 1},
+    "three"     : {"row" : 8,  "start" : 12, "length" : 5, "height" : 1},
+    
+    "minutes"   : {"row" : 9,  "start" : 1,  "length" : 7, "height" : 1},
+    "minute"    : {"row" : 9,  "start" : 1,  "length" : 6, "height" : 1},
+    "past"      : {"row" : 9,  "start" : 9,  "length" : 4, "height" : 1},
+    "to"        : {"row" : 9,  "start" : 12, "length" : 2, "height" : 1},
+    
+    "htwo"      : {"row" : 10,  "start" : 1, "length" : 3, "height" : 1},
+    "hone"      : {"row" : 10,  "start" : 3, "length" : 3, "height" : 1},
+    "heleven"   : {"row" : 10,  "start" : 5, "length" : 6, "height" : 1},
+    "hnine"     : {"row" : 10,  "start" : 10,"length" : 4, "height" : 1},
+    "hsix"      : {"row" : 10,  "start" : 14,"length" : 3, "height" : 1},
+    
+    "hseven"    : {"row" : 11, "start" : 1,  "length" : 5, "height" : 1},
+    "hthree"    : {"row" : 11, "start" : 6,  "length" : 5, "height" : 1},
+    "htwelve"   : {"row" : 11, "start" : 11, "length" : 6, "height" : 1},
+    
+    "hfour"     : {"row" : 12, "start" : 1,  "length" : 4, "height" : 1},
+    "hfive"     : {"row" : 12, "start" : 6,  "length" : 4, "height" : 1},
+    "height"    : {"row" : 12, "start" : 9,  "length" : 5, "height" : 1},
+    "hten"      : {"row" : 12, "start" : 13, "length" : 3, "height" : 1},
+    
+    "oclock"    : {"row" : 13, "start" : 1,  "length" : 6, "height" : 1},
+    "in"        : {"row" : 13, "start" : 8,  "length" : 2, "height" : 1},
+    "at"        : {"row" : 13, "start" : 10, "length" : 2, "height" : 1},
+    "zach"      : {"row" : 13, "start" : 13, "length" : 4, "height" : 1},
+    
+    "night"     : {"row" : 14, "start" : 1,  "length" : 5, "height" : 1},
+    "the2"      : {"row" : 14, "start" : 5,  "length" : 3, "height" : 1},
+    "morning"   : {"row" : 14, "start" : 9,  "length" : 7, "height" : 1},
+    
+    "evening"   : {"row" : 15, "start" : 1,  "length" : 7, "height" : 1},
+    "afternoon" : {"row" : 15, "start" : 8,  "length" : 9, "height" : 1},
+    "noon"      : {"row" : 15, "start" : 13, "length" : 4, "height" : 1},
+    
+    "happy"     : {"row" : 16, "start" : 1,  "length" : 5, "height" : 1},
+    "anniversary" : {"row" : 16, "start" : 6,  "length" : 11, "height" : 1},
 }
 
 # Generates the Appropriate Word List, given a datetime object. Defaults to Current Time
@@ -115,88 +124,194 @@ def getTimeWords(t=None):
 
     # If it's morning, we say "Good morning!"
     # Otherwise, we just say Hiya"
-    if t.hour > 5 and t.hour <= 10:
-        words += ['good','morning!']
-    else:
-        words += ['hiya']
+    #words += ['the','time','is']
+    
+    #if t.hour > 1 and t.hour < 12:
+    #    words += ['in','the','morning']
+    #elif t.hour == 12:
+    #    words += ['noon']
+    #elif t.hour > 12 and t.hour < 17:
+    #    words += ['in','the','afternoon']
+    #elif t.hour >= 17 and t.hour < 20:
+    #    words += ['in','the','evening']
+    #else:
+    #    words += ['at','night']
 
     # If it's early, it's "Time for Coffee"
     # If it's a little later, we say "Carpe Diem"
     # If it's late, we say "Time for Sleep"
-    if t.hour > 5 and t.hour <= 9:
-        words += ['time','for','coffee']
-    elif t.hour > 9 and t.hour <= 12:
-        words += ['carpe','diem']
-    elif t.hour > 22 or t.hour < 3:
-        words += ['time','for','sleep']
+    #if t.hour > 5 and t.hour <= 9:
+    #    words += ['time','for','coffee']
+    #elif t.hour > 9 and t.hour <= 12:
+    #    words += ['carpe','diem']
+    #elif t.hour > 22 or t.hour < 3:
+    #    words += ['time','for','sleep']
 
     # Minutes/OClock
-    words += ['it','is1']
-    if (t.minute <=2 and t.hour != 0 and t.hour !=12) or (t.minute > 57 and t.hour !=23 and t.hour !=11):
+    words += ['the','time','is']
+    if (t.minute = (t.minute ==0 and t.hour != 0 and t.hour !=12):
         words += ['oclock']
-    elif t.minute > 2 and t.minute <= 7:
-        words += ['five1','minutes','past']
-    elif t.minute > 7 and t.minute <= 12:
-        words += ['ten1','minutes','past']
-    elif t.minute > 12 and t.minute <= 17:
-        words += ['a1','quarter','past']
-    elif t.minute > 17 and t.minute <= 22:
-        words += ['twenty','minutes','past']
-    elif t.minute > 22 and t.minute <= 27:
-        words += ['twenty','five1','minutes','past']
-    elif t.minute > 27 and t.minute <= 32:
-        words += ['half','past']
-    elif t.minute > 32 and t.minute <= 37:
-        words += ['twenty','five1','minutes','to']
-    elif t.minute > 37 and t.minute <= 42:
-        words += ['twenty','minutes','to']
-    elif t.minute > 42 and t.minute <= 47:
-        words += ['a1','quarter','to']
-    elif t.minute > 47 and t.minute <= 52:
-        words += ['ten1','minutes','to']
-    elif t.minute > 52 and t.minute <= 57:
-        words += ['five1','minutes','to']
-
+    elif t.minute == 1:
+        words += = ['one','minute','past']
+    elif t.minute == 2:
+        words += = ['two','minutes','past']
+    elif t.minute == 3:
+        words += = ['three','minutes','past']
+    elif t.minute == 4:
+        words += = ['four','minutes','past']
+    elif t.minute == 5:
+        words += = ['five','minutes','past']
+    elif t.minute == 6:
+        words += = ['six','minutes','past']
+    elif t.minute == 7:
+        words += = ['seven','minutes','past']
+    elif t.minute == 8:
+        words += = ['eight','minutes','past']
+    elif t.minute == 9:
+        words += = ['nine','minutes','past']
+    elif t.minute == 10:
+        words += = ['ten','minutes','past']
+    elif t.minute == 11:
+        words += = ['eleven','minutes','past']
+    elif t.minute == 12:
+        words += = ['twelve','minutes','past']
+    elif t.minute == 13:
+        words += = ['thirteen','minutes','past']
+    elif t.minute == 14:
+        words += = ['fourteen','minutes','past']
+    elif t.minute == 15:
+        words += = ['quarter','past']
+    elif t.minute == 16:
+        words += = ['sixteen','minutes','past']
+    elif t.minute == 17:
+        words += = ['seventeen','minutes','past']
+    elif t.minute == 18:
+        words += = ['eighteen','minutes','past']
+    elif t.minute == 19:
+        words += = ['nineteen','minutes','past']
+    elif t.minute == 20:
+        words += = ['twenty','minutes','past']
+    elif t.minute == 21:
+        words += = ['twenty','one','minutes','past']
+    elif t.minute == 22:
+        words += = ['twenty','two','minutes','past']
+    elif t.minute == 23:
+        words += = ['twenty','three','minutes','past']
+    elif t.minute == 24:
+        words += = ['twenty','four','minutes','past']
+    elif t.minute == 25:
+        words += = ['twenty','five','minutes','past']
+    elif t.minute == 26:
+        words += = ['twenty','six','minutes','past']
+    elif t.minute == 27:
+        words += = ['twenty','seven','minutes','past']
+    elif t.minute == 28:
+        words += = ['twenty','eight','minutes','past']
+    elif t.minute == 29:
+        words += = ['twenty','nine','minutes','past']
+    elif t.minute == 30:
+        words += = ['half','past']
+    elif t.minute == 31:
+        words += = ['twenty','nine','minutes','to']
+    elif t.minute == 32:
+        words += = ['twenty','eight','minutes','to']
+    elif t.minute == 33:
+        words += = ['twenty','seven','minutes','to']
+    elif t.minute == 34:
+        words += = ['twenty','six','minutes','to']
+    elif t.minute == 35:
+        words += = ['twenty','five','minutes','to']
+    elif t.minute == 36:
+        words += = ['twenty','four','minutes','to']
+    elif t.minute == 37:
+        words += = ['twenty','three','minutes','to']
+    elif t.minute == 38:
+        words += = ['twenty','two','minutes','to']
+    elif t.minute == 39:
+        words += = ['twenty','one','minutes','to']
+    elif t.minute == 40:
+        words += = ['twenty','minutes','to']
+    elif t.minute == 41:
+        words += = ['nineteen','minutes','to']
+    elif t.minute == 42:
+        words += = ['eighteen','minutes','to']
+    elif t.minute == 43:
+        words += = ['seventeen','minutes','to']
+    elif t.minute == 44:
+        words += = ['sixteen','minutes','to']
+    elif t.minute == 45:
+        words += = ['quarter','to']
+    elif t.minute == 46:
+        words += = ['fourteen','minutes','to']
+    elif t.minute == 47:
+        words += = ['thirteen','minutes','to']
+    elif t.minute == 48:
+        words += = ['twelve','minutes','to']
+    elif t.minute == 49:
+        words += = ['eleven','minutes','to']
+    elif t.minute == 50:
+        words += = ['ten','minutes','to']
+    elif t.minute == 51:
+        words += = ['nine','minutes','to']
+    elif t.minute == 52:
+        words += = ['eight','minutes','to']
+    elif t.minute == 53:
+        words += = ['seven','minutes','to']
+    elif t.minute == 54:
+        words += = ['six','minutes','to']
+    elif t.minute == 55:
+        words += = ['five','minutes','to']
+    elif t.minute == 56:
+        words += = ['four','minutes','to']
+    elif t.minute == 57:
+        words += = ['three','minutes','to']
+    elif t.minute == 58:
+        words += = ['two','minutes','to']
+    elif t.minute == 59:
+        words += = ['one','minute','to']
+   
     #Hours
-    if t.minute > 32:
+    if t.minute > 30:
         disp_hour = t.hour + 1
     else:
         disp_hour = t.hour
 
     if disp_hour == 0 or disp_hour == 24:
-        words += ['midnight']
+        words += ["htwelve']    
     elif disp_hour == 12:
-        words += ['noon']
+        words += ['htwelve','noon']
     elif disp_hour == 1 or disp_hour == 13:
-        words += ['one']
+        words += ['hone']
     elif disp_hour == 2 or disp_hour == 14:
-        words += ['two']
+        words += ['htwo']
     elif disp_hour == 3 or disp_hour == 15:
-        words += ['three']
+        words += ['hthree']
     elif disp_hour == 4 or disp_hour == 16:
-        words += ['four']
+        words += ['hfour']
     elif disp_hour == 5 or disp_hour == 17:
-        words += ['five2']
+        words += ['hfive']
     elif disp_hour == 6 or disp_hour == 18:
-        words += ['six']
+        words += ['hsix']
     elif disp_hour == 7 or disp_hour == 19:
-        words += ['seven']
+        words += ['hseven']
     elif disp_hour == 8 or disp_hour == 20:
-        words += ['eight']
+        words += ['height']
     elif disp_hour == 9 or disp_hour == 21:
-        words += ['nine']
+        words += ['hnine']
     elif disp_hour == 10 or disp_hour == 22:
-        words += ['ten2']
+        words += ['hten']
     elif disp_hour == 11 or disp_hour == 23:
-        words += ['eleven']
+        words += ['heleven']
 
     #Time of Day
-    if (t.hour > 0 and t.hour < 11) or (t.hour == 0 and t.minute > 32) or (t.hour == 11 and t.minute <= 32):
-        words += ['in','the','morning']
-    elif (t.hour > 12 and t.hour < 18) or (t.hour == 12 and t.minute > 32):
-        words += ['in','the','afternoon']
-    elif (t.hour >= 18 and t.hour < 23) or (t.hour == 23 and t.minute <= 33):
-        words += ['in','the','evening']
+    if (t.hour > 0 and t.hour < 11) or (t.hour == 0 and t.minute > 30) or (t.hour == 11 and t.minute <= 30):
+        words += ['in','the2','morning']
+    elif (t.hour > 12 and t.hour < 18) or (t.hour == 12 and t.minute > 30):
+        words += ['in','the2','afternoon']
+    elif (t.hour >= 18 and t.hour < 20) or (t.hour == 20 and t.minute <= 30):
+        words += ['in','the2','evening']
+    elif (t.hour >= 20 and t.hour < 23) or (t.hour == 23 and t.minute <= 30):
+        words += ['at','night']
 
     print t.strftime('%I:%M%p'),
     print "- " + (' '.join(words)).translate(None, digits)
@@ -289,20 +404,20 @@ def run(mode="clock", primary_color=RED, secondary_color=AQUA, modifiers=[]):
             if "birthday" in modifiers and t.month == BIRTH_MONTH and t.day == BIRTH_DAY and secondary_counter%5 == 0 and secondary_counter < 100:
                 secondary_words += ['happy','birthday']
                 print "        - Happy Birthday"
-            if "friday" in modifiers and t.weekday() == 4 and (secondary_counter+2)%5 == 0 and secondary_counter < 100:
-                secondary_words +=['happy','friday']
-                print "        - Happy Friday"
-            if "iloveyou" in modifiers and "midnight" not in primary_words and (secondary_counter+3)%20 == 0 and secondary_counter < 100:
-                #Uses the "I" in midnight, so it doesn't run if midnight is lit up
-                secondary_words += ['i','love','you']
-                print "        - I Love You"
-            if "byjeremy" in modifiers and "oclock" not in primary_words and secondary_counter>=100 and secondary_counter<=105:
-                #Uses "Clock" in "oclock", so it doesn't run if oclock is lit up
-                secondary_words += ['this','is2','a2','word','clock','built','with','love','by','jeremy','heart2']
-                print "        - This is a word clock built with love by Jeremy <3"
-            if "leah" in modifiers:
-                tertiary_words = ['leah1', 'heart1']
-                tertiary_color = FADE_COLORS[fade_counter]
+            #if "friday" in modifiers and t.weekday() == 4 and (secondary_counter+2)%5 == 0 and secondary_counter < 100:
+            #    secondary_words +=['happy','friday']
+            #    print "        - Happy Friday"
+            #if "iloveyou" in modifiers and "midnight" not in primary_words and (secondary_counter+3)%20 == 0 and secondary_counter < 100:
+            #    #Uses the "I" in midnight, so it doesn't run if midnight is lit up
+            #    secondary_words += ['i','love','you']
+            #    print "        - I Love You"
+            #if "byjeremy" in modifiers and "oclock" not in primary_words and secondary_counter>=100 and secondary_counter<=105:
+            #    #Uses "Clock" in "oclock", so it doesn't run if oclock is lit up
+            #    secondary_words += ['this','is2','a2','word','clock','built','with','love','by','jeremy','heart2']
+            #    print "        - This is a word clock built with love by Jeremy <3"
+            #if "leah" in modifiers:
+            #    tertiary_words = ['leah1', 'heart1']
+            #    tertiary_color = FADE_COLORS[fade_counter]
 
             setDisplay(primary_words,primary_color,secondary_words,secondary_color,tertiary_words,tertiary_color)
             fade_counter += 1
@@ -324,4 +439,4 @@ def exit_handler():
 if __name__ == '__main__':
     atexit.register(exit_handler)
     signal.signal(signal.SIGINT, lambda x,y: sys.exit(0))
-    run("clock", modifiers=["birthday","friday","iloveyou","byjeremy","leah"])
+    run("time-test")
